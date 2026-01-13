@@ -1,6 +1,6 @@
 USTH Machine Learning in Medicine 2026
 ==================================
 
-* Your name here
-* Your ID here
-* Your team ID here
+* Pham Dinh Bao Khoi
+* ID: 23BI14230
+* team ID: 9
