@@ -20,7 +20,15 @@ Although various studies have proposed automating HC measurement through image s
 
 
 \section{EXPERIMENT}
-using ntoebook Kaagle to EDA and GPU P100 to build model deep learning (updating). 
+All experimental using ntoebook Kaagle GPU P100  (updating). 
+
+\subsection{dataset HC18}
+We utilize the HC18 training dataset, which comprises 999 fetal ultrasound images acquired at various gestational ages, annotated with their corresponding head circumference (HC) measurements. HC values range from 439.1 pixels (44.3 mm) to 1786.5 pixels (346.4 mm), with average value being 1263.3±264.4pixels (174.4±65.2mm). In our experimental setup, the dataset was randomly partitioned into three distinct subsets: a training set (600 images), a validation set (200 images), and a test set (199 images).To improve model generalization and mitigate overfitting, we expanded the training set from 600 to 1,800 images using a static data augmentation strategy. This involved generating three variations for every training sample: the original image, a horizontally flipped version, and a geometrically transformed version (rotation of $10^{\circ}$ combined with a translation offset of 5 pixels).Prior to model input, all images were preprocessed by resizing them to a fixed resolution of $224 \times 224$ pixels. To align with the pre-trained ResNet-50 backbone, the single-channel ultrasound images were converted to three-channel format and normalized using the standard ImageNet mean ($\mu=[0.485, 0.456, 0.406]$) and standard deviation ($\sigma=[0.229, 0.224, 0.225]$).
+
+\subsection{experimental setup}
+All experiments are performed using a hold-out validation strategy, where the model is trained on the augmented training set and evaluated on a dedicated test set of 199 images. The metrics to evaluate the results are Mean Absolute Error (MAE) measured in pixels and in mm, and the percentage of MAE (pMAE). We have empirically set $\delta = 0.5$ in Huber loss to enhance robustness against outliers. The model is trained with a batch size of 32, a learning rate of $1e^{-4}$, and Adam as the optimizer. The deep learning model is implemented with PyTorch.
+
+
 \subsection{EDA}
 as you can see in the notebook
 \subsection{modeling}
