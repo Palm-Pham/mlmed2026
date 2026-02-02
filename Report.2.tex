@@ -16,7 +16,6 @@ The measurement of fetal head circumference (HC) is a fundamental biometric asse
 
 Although various studies have proposed automating HC measurement through image segmentation algorithms \cite{li}, recent advancements in medical imaging have shifted toward the direct extraction of biomarkers—such as organ volume or area—without an intermediate segmentation step \cite{zhen}. Segmentation approaches can be computationally intensive for both training and labeling, and they remain susceptible to errors \cite{zhen}. For instance, direct volume estimation of cardiac ventricles from magnetic resonance images has been successfully demonstrated using learning-based approaches \cite{cardiac}. By utilizing Convolutional Neural Networks (CNNs), it is possible to skip the manual feature design step and learn the necessary features to perform regression directly. This regression CNN approach has already proven effective in computer vision applications, including head-pose estimation and facial landmark detection \cite{liu, sun}.
 
-In this work, we investigate the viability of a direct approach to estimate HC from ultrasound images without resorting to segmentation \cite{proposal}. Our methodology utilizes regression CNNs, comparing four distinct architectures and three regression loss functions \cite{arch}. The experiments are conducted using the public HC18 dataset \cite{hc18}. To the best of our knowledge, this is the first attempt to directly assess fetal head circumference without the use of segmentation techniques \cite{novelty}.
 
 
 
@@ -47,5 +46,49 @@ odo, 2018. DOI: http://doi.org/10.5281/zenodo.1322001.
     \item https://doi.org/10.48550/arXiv.1505.04597
     \item G. Bradski, “The OpenCV Library,” Dr. Dobb’s Journal
 of Software Tools, 2000.
+
+
+\begin{thebibliography}{9}
+
+\bibitem{intro}
+J. Zhang et al., "Direct estimation of fetal head circumference from ultrasound images based on regression CNN," \textit{Proceedings of Machine Learning Research}, vol. 121, pp. 914-922, 2020.
+
+\bibitem{manual}
+T. L. A. van den Heuvel et al., "Automated measurement of fetal head circumference using 2d ultrasound images," \textit{PLOS ONE}, vol. 13, no. 8, 2018.
+
+\bibitem{fuzzy}
+will be  Provided Source text, Section 1, Para 1.
+
+\bibitem{sarris}
+I. Sarris et al., "Intra-and interobserver variability in fetal ultrasound measurements," \textit{Ultrasound in obstetrics \& gynecology}, vol. 39, no. 3, pp. 266-273, 2012.
+
+\bibitem{li}
+J. Li et al., "Automatic fetal head circumference measurement in ultrasound using random forest and fast ellipse fitting," \textit{IEEE journal of biomedical and health informatics}, vol. 22, no. 1, pp. 215-223, 2017.
+
+\bibitem{zhen}
+X. Zhen and S. Li, "Towards direct medical image analysis without segmentation," \textit{CoRR}, abs/1510.06375, 2015.
+
+\bibitem{cardiac}
+X. Zhen et al., "Direct volume estimation without segmentation," \textit{SPIE Progress in Biomedical Optics and Imaging}, vol. 9413, 2015.
+
+\bibitem{liu}
+X. Liu et al., "3d head pose estimation with convolutional neural network trained on synthetic images," in \textit{IEEE ICIP}, pp. 1289-1293, 2016.
+
+\bibitem{sun}
+Y. Sun, X. Wang, and X. Tang, "Deep convolutional network cascade for facial point detection," in \textit{Proceedings of IEEE CVPR}, pp. 3476-3483, 2013.
+
+\bibitem{proposal}
+J. Zhang, C. Petitjean, P. Lopez, and S. Ainouz, "Direct Estimation of Fetal Head Circumference Based on Regression CNN," \textit{MIDL 2020}.
+
+\bibitem{arch}
+I will Provided Source text, Section 3.
+
+\bibitem{hc18}
+T. L. A. van den Heuvel et al., "Automated measurement of fetal head circumference using 2d ultrasound images [data set]," \textit{Zenodo}, 2018.
+
+\bibitem{novelty}
+I will Provided Source text, Section 1, Para 4.
+
+\end{thebibliography}
     
 \end{enumerate}
