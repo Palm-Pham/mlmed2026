@@ -12,7 +12,11 @@
 
 \maketitle
 \section{Introduction}
+The measurement of fetal head circumference (HC) is a fundamental biometric assessed throughout pregnancy to monitor fetal development and estimate gestational age \cite{intro}. In standard clinical practice, this measurement is derived from ultrasound (US) images, typically by manually tracing the skull or fitting an ellipse to the anatomy \cite{manual}. However, the process of identifying the head contour is complicated by the inherent low signal-to-noise ratio of US images, as well as borders that are often fuzzy or incomplete \cite{fuzzy}. As a result, manual contouring is an operator-dependent task prone to significant variability; specifically, intra-operator and inter-operator variability have been recorded at $\pm7$mm and $\pm12$mm respectively, which can compromise measurement accuracy \cite{sarris}.
 
+Although various studies have proposed automating HC measurement through image segmentation algorithms \cite{li}, recent advancements in medical imaging have shifted toward the direct extraction of biomarkers—such as organ volume or area—without an intermediate segmentation step \cite{zhen}. Segmentation approaches can be computationally intensive for both training and labeling, and they remain susceptible to errors \cite{zhen}. For instance, direct volume estimation of cardiac ventricles from magnetic resonance images has been successfully demonstrated using learning-based approaches \cite{cardiac}. By utilizing Convolutional Neural Networks (CNNs), it is possible to skip the manual feature design step and learn the necessary features to perform regression directly. This regression CNN approach has already proven effective in computer vision applications, including head-pose estimation and facial landmark detection \cite{liu, sun}.
+
+In this work, we investigate the viability of a direct approach to estimate HC from ultrasound images without resorting to segmentation \cite{proposal}. Our methodology utilizes regression CNNs, comparing four distinct architectures and three regression loss functions \cite{arch}. The experiments are conducted using the public HC18 dataset \cite{hc18}. To the best of our knowledge, this is the first attempt to directly assess fetal head circumference without the use of segmentation techniques \cite{novelty}.
 
 
 
